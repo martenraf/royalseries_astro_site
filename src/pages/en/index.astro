@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const TITLE = "A Royal Life - How Union with Christ Releases the River of God";
+const DESCRIPTION = "Stop trying to be a Christian and start living from the life already given. Discover Union with Christ and the River of God.";
+const TAGLINE = "Living from your Union with Christ";
+---
+<BaseLayout title={TITLE} description={DESCRIPTION} lang="en">
+  <section id="hero" class="relative min-h-[90vh] bg-gradient-to-br from-background via-background to-accent/5 pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10 opacity-50"></div>
+
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(90vh-120px)]">
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <p class="text-accent font-display font-semibold text-lg tracking-wide uppercase">New Book</p>
+            <h1 class="text-primary leading-tight">A Royal Life</h1>
+            <p class="text-2xl md:text-3xl text-foreground font-display font-light tracking-wide">
+              How Union with Christ Releases the River of God
+            </p>
+            <p class="text-foreground/70 font-body text-base md:text-lg max-w-xl">
+              <span class="font-semibold text-primary">Series tagline:</span> {TAGLINE}
+            </p>
+          </div>
+
+          <p class="text-lg text-foreground/80 leading-relaxed max-w-xl font-body">
+            Stop trying to be a Christian and start living from the life already given. Most believers struggle because they live in the wrong direction—climbing a ladder of effort rather than stepping into the River of God. Discover how Union with Christ unlocks your brand new identity and releases the constant supply of peace, presence, and power.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button type="button" onclick="window.openBuyModal?.()"
+              class="inline-flex items-center justify-center px-8 py-4 bg-accent text-foreground font-display font-semibold text-lg hover:opacity-90 hover:shadow-soft transition-all duration-300 rounded-md">
+              View on Amazon
+            </button>
+            <a href="https://chatgpt.com/g/g-69904d77fdc8819199d138dc318277dc-royal-life-companion" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary hover:bg-primary/5 font-display font-semibold text-lg transition-all duration-300 rounded-md">
+              Open The Royal Life Companion
+            </a>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg blur-2xl"></div>
+            <img src="/img/book.jpg" alt="A Royal Life Book Cover"
+              class="relative w-full max-w-sm h-auto rounded-lg shadow-2xl border-4 border-primary/20" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 md:py-28 px-4 sm:px-6 lg:px-8 bg-card">
+    <div class="max-w-4xl mx-auto space-y-12">
+      <div class="text-center space-y-4">
+        <h2 class="text-primary">About the Book</h2>
+        <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="prose prose-lg max-w-none space-y-6 text-foreground font-body">
+        <p class="text-lg leading-relaxed">
+          Are you tired of "trying" to be a Christian? Most sincere Christians don't struggle because they lack faith. They struggle because they live in the wrong direction—climbing a ladder of effort rather than stepping into the River of God. The result isn't growth; it's total exhaustion.
+        </p>
+
+        <p class="text-lg leading-relaxed">
+          But Jesus says the opposite (Matt. 11:28): "Come to Me… and I will give you rest." In A Royal Life, you'll discover how to stop swimming upstream and start living from the life already given: your Union with Christ.
+        </p>
+
+        <div class="border-l-4 border-accent bg-accent/5 p-8 my-8 rounded-md">
+          <p class="text-xl font-display font-semibold text-primary italic">
+            "You were made to live in the River of Life. Come into the River through Union, Stay through Communion, and Flow as a channel through Participation with Christ."
+          </p>
+        </div>
+
+        <p class="text-lg leading-relaxed font-semibold text-primary mb-4">Three Transformative Concepts:</p>
+        <ul class="space-y-3 text-lg leading-relaxed">
+          <li class="flex items-start">
+            <span class="text-accent mr-3 mt-1 font-bold">→</span>
+            <span><strong>Union with Christ: The "Main Valve."</strong> Your Union unlocks your brand new identity.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-accent mr-3 mt-1 font-bold">→</span>
+            <span><strong>The River of God: Your Spiritual Supply.</strong> The Holy Spirit's constant supply of peace, presence and power that flows naturally from your Union with Christ.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-accent mr-3 mt-1 font-bold">→</span>
+            <span><strong>The Riverbed: Your New Order of Life.</strong> Discover how your Union unfolds the riverbanks of your life through the Ordo Vitae—life's order.</span>
+          </li>
+        </ul>
+
+        <p class="text-lg leading-relaxed pt-4">
+          This book is essential for pastors, leaders, and disciple-makers seeking to call the church back to the root—Union with Christ—and showing how Union unfolds in lived formation, shaping the riverbank that allows the River of God to flow with clarity, power, and direction.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="author" class="py-24 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-primary">About the Author</h2>
+        <div class="w-24 h-1 bg-accent mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="flex justify-center md:order-2">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-2xl opacity-30"></div>
+            <img src="/img/author.jpg" alt="Author Portrait"
+              class="relative w-64 h-64 rounded-full shadow-2xl border-4 border-primary/20 object-cover" />
+          </div>
+        </div>
+
+        <div class="space-y-6 md:order-1">
+          <div class="space-y-4">
+            <h3 class="text-2xl md:text-3xl font-display font-semibold text-primary">Marten Busstra</h3>
+            <p class="text-lg text-foreground/80 font-body leading-relaxed">Marten Busstra is a church strategist, teacher and writer. Marten has been married to Annelies for 33 years and has two children and one grandchild. He has served as an elder and pastor in a Foursquare church in the Netherlands for over 25 years, with a passion to see the Kingdom of God come. In recent years, Marten started teaching, training, and writing about discipleship and the church. A Royal Life is his first book, focusing on Union with Christ as the foundation of discipleship and authentic Christian living. His next book, "A Royal Church," is in development.</p>
+          </div>
+
+          <div class="pt-2">
+            <p class="font-display font-semibold text-primary text-lg">Author's Focus</p>
+            <ul class="space-y-2 text-foreground/80 mt-3">
+              <li class="flex items-start"><span class="text-accent mr-3 mt-1">✦</span><span>Teaching on the foundations for discipleship</span></li>
+<li class="flex items-start"><span class="text-accent mr-3 mt-1">✦</span><span>Writing on the foundations for Church development</span></li>
+<li class="flex items-start"><span class="text-accent mr-3 mt-1">✦</span><span>Training spiritual leadership for Kingdom fulfilment</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-2">
+            <p class="font-display font-semibold text-primary text-lg">Series Vision</p>
+            <p class="text-lg text-foreground/80 font-body leading-relaxed mt-3">The Royal Series aims to lay a renewed foundation for both discipleship and the church. Its unique vantage point is Christ as the Source and the Holy Spirit as the River of Life. To overcome the current crisis in the church, we need to go back to the Source and revisit the foundations so that the River may flow again. This transforms disciples into channels of Gods love and churches into gateways of heaven.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="companion" class="py-24 md:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary to-primary/90 text-white">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10 opacity-30"></div>
+
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center space-y-4 mb-12">
+        <h2 class="text-white">The Royal Life Companion</h2>
+        <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="space-y-8">
+        <p class="text-xl text-center text-white/90 font-body leading-relaxed max-w-3xl mx-auto">
+          The Royal Life Companion belongs to the book A Royal Life. It assists the reader to live from Christ instead of toward Him. It helps to translate the royal life into daily practice.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6 shadow-soft hover:bg-white/15 transition-all duration-300">
+            <div class="text-3xl text-accent mb-4">💬</div>
+            <h3 class="font-display font-semibold text-lg mb-3">Interactive Learning</h3>
+            <p class="text-sm text-white/80">Engage in meaningful dialogue about the Royal Life you are meant to live</p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6 shadow-soft hover:bg-white/15 transition-all duration-300">
+            <div class="text-3xl text-accent mb-4">🎯</div>
+            <h3 class="font-display font-semibold text-lg mb-3">Personalized Guidance</h3>
+            <p class="text-sm text-white/80">Receive tailored prompts to translate Union with Christ into daily life</p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6 shadow-soft hover:bg-white/15 transition-all duration-300">
+            <div class="text-3xl text-accent mb-4">🌊</div>
+            <h3 class="font-display font-semibold text-lg mb-3">Deep Exploration</h3>
+            <p class="text-sm text-white/80">Go deeper into the River of God and the Ordo Vitae—without performance pressure</p>
+          </div>
+        </div>
+
+        <div class="text-center space-y-6">
+          <a href="https://chatgpt.com/g/g-69904d77fdc8819199d138dc318277dc-royal-life-companion" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-10 py-4 bg-white text-primary font-display font-bold text-lg hover:bg-accent hover:text-foreground transition-all duration-300 rounded-md shadow-lg">
+            Open The Royal Life Companion
+          </a>
+          <p class="text-sm text-white/70 italic">Requires a free or paid ChatGPT account</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="get-book" class="py-24 md:py-28 px-4 sm:px-6 lg:px-8 bg-card">
+    <div class="max-w-4xl mx-auto text-center space-y-12">
+      <div class="space-y-4">
+        <h2 class="text-primary">Get the Book</h2>
+        <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+      </div>
+
+      <p class="text-xl text-foreground/80 font-body leading-relaxed">
+        A Royal Life is now available on Amazon, ready to reframe discipleship as a life given, not performed.
+      </p>
+
+      <button type="button" onclick="window.openBuyModal?.()"
+        class="inline-flex items-center justify-center px-12 py-5 bg-accent text-foreground font-display font-bold text-xl hover:opacity-90 hover:shadow-xl transition-all duration-300 rounded-md shadow-lg">
+        Buy on Amazon
+      </button>
+    </div>
+  </section>
+</BaseLayout>

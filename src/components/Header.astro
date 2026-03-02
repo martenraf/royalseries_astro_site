@@ -1,0 +1,61 @@
+---
+const { lang } = Astro.props;
+const base = `/${lang}`;
+const otherLang = lang === 'nl' ? 'en' : 'nl';
+const currentPath = Astro.url.pathname || `${base}/`;
+const switchPath = currentPath.startsWith(`/${lang}`)
+  ? currentPath.replace(`/${lang}`, `/${otherLang}`)
+  : `/${otherLang}/`;
+
+const labels = lang === 'nl'
+  ? { home:'Home', book:'Boek', author:'Auteur', companion:'Companion', blog:'Blog', get:'Koop het boek' }
+  : { home:'Home', book:'Book', author:'Author', companion:'Companion', blog:'Blog', get:'Get the Book' };
+
+const nav = [
+  { href: `${base}/#hero`, label: labels.home },
+  { href: `${base}/#about`, label: labels.book },
+  { href: `${base}/#author`, label: labels.author },
+  { href: `${base}/#companion`, label: labels.companion },
+  { href: `${base}/blog/`, label: labels.blog },
+  { href: `${base}/#get-book`, label: labels.get },
+];
+---
+<header class="sticky top-0 z-50 bg-background/90 backdrop-blur border-b border-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <a href={`${base}/#hero`} class="font-display font-semibold tracking-wide text-primary text-lg">
+      The Royal Series
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+      {nav.map(item => (
+        <a href={item.href} class="text-foreground/80 hover:text-primary transition-colors">{item.label}</a>
+      ))}
+      <span class="text-foreground/30">|</span>
+      <a href={switchPath} class="text-primary hover:text-accent transition-colors">{lang === 'nl' ? 'EN' : 'NL'}</a>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-3">
+      <a href={switchPath} class="text-sm font-semibold text-primary">{lang === 'nl' ? 'EN' : 'NL'}</a>
+      <button id="menuBtn" class="p-2 rounded-md border border-border text-primary" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden hidden border-t border-border bg-background">
+    <div class="px-4 py-4 flex flex-col gap-3">
+      {nav.map(item => (
+        <a href={item.href} class="text-foreground/80 hover:text-primary transition-colors" data-close-menu="true">{item.label}</a>
+      ))}
+    </div>
+  </div>
+
+  <script is:inline>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      menu.querySelectorAll('[data-close-menu="true"]').forEach(a => {
+        a.addEventListener('click', () => menu.classList.add('hidden'));
+      });
+    }
+  </script>
+</header>

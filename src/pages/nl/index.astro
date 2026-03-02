@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BuyModal from '../../components/BuyModal.astro';
+
+const TITLE = "Een Koninklijk Leven - Hoe eenheid met Christus de rivier van God vrijzet";
+const DESCRIPTION = "Stop met proberen een christen te zijn en leer leven vanuit het leven dat al gegeven is. Ontdek eenheid met Christus en de rivier van God.";
+const TAGLINE = "Leven vanuit je eenheid met Christus";
+---
+
+<BaseLayout title={TITLE} description={DESCRIPTION} lang="nl">
+
+  <!-- HERO -->
+  <section id="hero" class="relative min-h-[90vh] bg-gradient-to-br from-background via-background to-accent/5 pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10 opacity-50"></div>
+
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(90vh-120px)]">
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <p class="text-accent font-display font-semibold text-lg tracking-wide uppercase">Nieuw boek</p>
+            <h1 class="text-primary leading-tight">Een Koninklijk Leven</h1>
+            <p class="text-2xl md:text-3xl text-foreground font-display font-light tracking-wide">
+              Hoe eenheid met Christus de rivier van God vrijzet
+            </p>
+            <p class="text-foreground/70 font-body text-base md:text-lg max-w-xl">
+              <span class="font-semibold text-primary">Serie slogan:</span> {TAGLINE}
+            </p>
+          </div>
+
+          <p class="text-lg text-foreground/80 leading-relaxed max-w-xl font-body">
+            Misschien hoef je niet harder te proberen, maar meer te leven vanuit wat je al ontvangen hebt. Veel gelovigen worstelen niet omdat ze te weinig geloof hebben, maar omdat ze in de verkeerde richting leven — klimmend op een ladder van inspanning in plaats van binnen te stappen in de rivier van God. Ontdek hoe eenheid met Christus je nieuwe identiteit ontsluit en een constante stroom van vrede, nabijheid en kracht vrijzet.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button type="button" onclick="window.openBuyModal?.()"
+              class="inline-flex items-center justify-center px-8 py-4 bg-accent text-foreground font-display font-semibold text-lg hover:opacity-90 hover:shadow-soft transition-all duration-300 rounded-md">
+              Bekijk op Amazon
+            </button>
+
+            <a href="https://chatgpt.com/g/g-69904d77fdc8819199d138dc318277dc-royal-life-companion"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary hover:bg-primary/5 font-display font-semibold text-lg transition-all duration-300 rounded-md">
+              Open de Royal Life Companion
+            </a>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg blur-2xl"></div>
+            <img src="/img/book.jpg" alt="A Royal Life Book Cover"
+              class="relative w-full max-w-sm h-auto rounded-lg shadow-2xl border-4 border-primary/20" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 md:py-28 px-4 sm:px-6 lg:px-8 bg-card">
+    <div class="max-w-4xl mx-auto space-y-12">
+      <div class="text-center space-y-4">
+        <h2 class="text-primary">Over het boek</h2>
+        <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="prose prose-lg max-w-none space-y-6 text-foreground font-body">
+        <p>
+          Ben je moe van het steeds opnieuw “proberen” als christen? Veel oprechte gelovigen worstelen niet vanwege gebrek aan geloof, maar omdat ze in de verkeerde richting leven — ze klimmen een ladder van inspanning op in plaats van te rusten in de rivier van God. Het resultaat is geen groei, maar uitputting.
+        </p>
+
+        <p>
+          Maar Jezus zegt het tegenovergestelde (Matt. 11:28): “Kom naar Mij… en Ik zal je rust geven.” In 'Een Koninklijk Leven' ontdek je hoe je stopt met tegen de stroom in zwemmen en leert leven vanuit het leven dat al gegeven is: je eenheid met Christus.
+        </p>
+
+        <div class="border-l-4 border-accent bg-accent/5 p-8 my-8 rounded-md">
+          <p class="text-xl font-display font-semibold text-primary italic">
+            “Je bent gemaakt om te leven in de rivier van het leven. Kom in de rivier door eenheid, blijf door verbondenheid en stroom als kanaal door vertegenwoordiging met Christus.”
+          </p>
+        </div>
+
+        <p class="font-semibold text-primary mb-4">Drie transformerende inzichten:</p>
+        <ul>
+          <li><strong>Eenheid met Christus:</strong> Je eenheid ontsluit je nieuwe identiteit.</li>
+          <li><strong>De rivier van God:</strong> De voortdurende stroom van vrede, nabijheid en kracht die voortkomt uit je eenheid met Christus.</li>
+          <li><strong>De rivierbedding:</strong> De nieuwe orde van je leven — de Ordo Vitae.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section id="author" class="py-24 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-primary">Over de auteur</h2>
+        <div class="w-24 h-1 bg-accent mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="flex justify-center md:order-2">
+          <img src="/img/author.jpg" alt="Author Portrait"
+            class="w-64 h-64 rounded-full shadow-2xl border-4 border-primary/20 object-cover" />
+        </div>
+
+        <div class="space-y-6 md:order-1">
+          <h3 class="text-2xl md:text-3xl font-display font-semibold text-primary">Marten Busstra</h3>
+
+          <p>
+            Marten Busstra is kerkstrateeg, docent en schrijver. Hij is 33 jaar getrouwd met Annelies en heeft twee kinderen en één kleinkind. Hij diende meer dan 25 jaar als oudste en voorganger in een Foursquare gemeente in Nederland.
+          </p>
+
+          <p>
+            In de afgelopen jaren is Marten gaan onderwijzen, trainen en schrijven over discipelschap en kerkontwikkeling. Een Koninklijk Leven legt het fundament van discipelschap in de eenheid met Christus. Zijn volgende boek, “A Royal Church”, is in voorbereiding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUY -->
+  <section id="get-book" class="py-24 md:py-28 px-4 sm:px-6 lg:px-8 bg-card text-center">
+    <h2 class="text-primary">Koop het boek</h2>
+    <p class="text-lg text-foreground/80 mt-6">
+      Een Koninklijk Leven is nu beschikbaar op Amazon.
+    </p>
+
+    <button type="button" onclick="window.openBuyModal?.()"
+      class="mt-8 inline-flex items-center justify-center px-12 py-5 bg-accent text-foreground font-display font-bold text-xl rounded-md shadow-lg">
+      Koop op Amazon
+    </button>
+  </section>
+
+  <BuyModal bookKey="royalLife" pageLang="nl" />
+
+</BaseLayout>

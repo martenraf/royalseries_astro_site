@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.625rem;
+  --background: 0.98 0.008 60;
+  --foreground: 0.18 0.02 260;
+  --card: 0.99 0.005 60;
+  --primary: 0.27 0.12 260;
+  --accent: 0.72 0.16 70;
+  --muted: 0.92 0.01 60;
+  --border: 0.93 0.01 60;
+}
+
+html { scroll-behavior: smooth; }
+body { @apply bg-background text-foreground font-body; line-height: 1.6; }
+
+h1,h2,h3,h4,h5,h6 { @apply font-display font-semibold tracking-wide; }
+h1 { @apply text-5xl md:text-6xl font-bold; letter-spacing: 0.05em; }
+h2 { @apply text-3xl md:text-4xl; letter-spacing: 0.04em; }
+h3 { @apply text-2xl md:text-3xl; letter-spacing: 0.03em; }
+
+section { scroll-margin-top: 96px; }
+
+.prose h2 { @apply text-3xl font-display font-semibold text-primary mt-10 mb-4; }
+.prose h3 { @apply text-2xl font-display font-semibold text-primary mt-8 mb-3; }
+.prose p  { @apply text-lg leading-8 mb-6; }
+.prose ul { @apply list-disc list-inside space-y-2 mb-6 ml-4; }
+.prose li { @apply text-lg leading-8; }
+.prose strong { @apply font-semibold text-primary; }
+.prose blockquote { @apply border-l-4 border-accent bg-accent/5 p-6 my-8 rounded-md; }

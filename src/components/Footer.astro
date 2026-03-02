@@ -1,0 +1,48 @@
+---
+const { lang } = Astro.props;
+const base = `/${lang}`;
+const t = lang === 'nl'
+  ? { quick:'Snelle links', resources:'Bronnen', buy:'Koop op Amazon', rights:'Alle rechten voorbehouden.' }
+  : { quick:'Quick Links', resources:'Resources', buy:'Buy on Amazon', rights:'All rights reserved.' };
+---
+<footer class="bg-primary text-white mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div>
+      <p class="font-display font-semibold text-xl tracking-wide">A Royal Life</p>
+      <p class="text-white/80 mt-2">How Union with Christ Releases the River of God</p>
+      <p class="text-white/70 mt-4 text-sm">
+        {lang === 'nl'
+          ? 'De Royal Series legt een vernieuwd fundament voor discipelschap en kerk—Christus als Bron, de Geest als Rivier.'
+          : 'The Royal Series lays a renewed foundation for discipleship and the church—Christ as Source, the Spirit as the River.'}
+      </p>
+    </div>
+
+    <div>
+      <p class="font-display font-semibold text-lg mb-4">{t.quick}</p>
+      <ul class="space-y-2 text-white/80">
+        <li><a class="hover:text-white" href={`${base}/#hero`}>Home</a></li>
+        <li><a class="hover:text-white" href={`${base}/#about`}>{lang==='nl'?'Boek':'Book'}</a></li>
+        <li><a class="hover:text-white" href={`${base}/#author`}>{lang==='nl'?'Auteur':'Author'}</a></li>
+        <li><a class="hover:text-white" href={`${base}/#companion`}>Companion</a></li>
+        <li><a class="hover:text-white" href={`${base}/blog/`}>Blog</a></li>
+        <li><a class="hover:text-white" href={`${base}/#get-book`}>{t.buy}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-display font-semibold text-lg mb-4">{t.resources}</p>
+      <ul class="space-y-2 text-white/80">
+        <li><a class="hover:text-white" href="https://chatgpt.com/g/g-69904d77fdc8819199d138dc318277dc-royal-life-companion" target="_blank" rel="noopener">Royal Life Companion</a></li>
+        <li>
+          <button type="button" onclick="window.openBuyModal?.()" class="hover:text-white text-left">
+            Amazon Store
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10 py-6 text-center text-sm text-white/70">
+    © 2026 The Royal Series. {t.rights}
+  </div>
+</footer>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts
+    .filter(post => post.data.lang === 'en')
+    .map(post => ({
+      params: { slug: post.slug },
+      props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} | The Royal Series`}
+  description={post.data.description}
+  lang="en"
+>
+  <section class="py-24 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-accent font-display font-semibold text-sm uppercase tracking-wide">
+        Blog
+      </p>
+
+      <h1 class="text-primary mt-2 text-4xl md:text-5xl">
+        {post.data.title}
+      </h1>
+
+      <p class="mt-4 text-foreground/80 text-lg">
+        {post.data.description}
+      </p>
+
+      <p class="mt-4 text-sm text-foreground/60">
+        {post.data.author} •{" "}
+        {post.data.pubDate.toLocaleDateString('en-GB', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })} •{" "}
+        {post.data.readTime ?? '5 min read'}
+      </p>
+
+      <div class="w-24 h-1 bg-accent rounded-full mt-6"></div>
+    </div>
+
+    <div class="max-w-2xl mx-auto mt-10 prose prose-lg">
+      <Content />
+    </div>
+
+    <div class="max-w-2xl mx-auto mt-12">
+      <a
+        href="/en/blog/"
+        class="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary hover:bg-primary/5 font-display font-semibold rounded-md transition-all"
+      >
+        ← Back to Blog
+      </a>
+    </div>
+  </section>
+</BaseLayout>

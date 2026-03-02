@@ -1,0 +1,64 @@
+---
+import { BOOKS, amazonUrl, type BookKey, type LangCode, type MarketCode } from '../lib/books';
+
+const { bookKey, pageLang } = Astro.props as { bookKey: BookKey; pageLang: LangCode };
+
+const book = BOOKS[bookKey];
+
+const defaultLang: LangCode = pageLang === 'nl' ? 'nl' : 'en';
+
+const defaultStores = Object.keys(book.languages[defaultLang].stores) as MarketCode[];
+
+const defaultMarket: MarketCode =
+  (defaultStores.includes('NL') ? 'NL' : defaultStores[0]) ?? 'US';
+
+// Build final redirect map correctly
+const redirectMap: Record<string, string> = {};
+
+for (const [lang, data] of Object.entries(book.languages)) {
+  const stores = data.stores;
+  const asin = stores[defaultMarket];
+
+  if (asin) {
+    redirectMap[lang] = amazonUrl(defaultMarket, asin);
+  }
+}
+---
+<div id="buy-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white p-8 rounded-xl w-full max-w-md">
+    <h3 class="text-2xl font-display mb-6">
+      {pageLang === 'nl' ? 'Kies je taal' : 'Choose your language'}
+    </h3>
+
+    <div class="space-y-3">
+      {Object.entries(book.languages).map(([lang, data]) => (
+        <button
+          class="w-full border border-primary rounded-md py-3 hover:bg-primary hover:text-white transition"
+          onclick={`window.redirectToAmazon('${lang}')`}
+        >
+          {data.label}
+        </button>
+      ))}
+    </div>
+
+    <button class="mt-6 text-sm underline" onclick="window.closeBuyModal()">
+      {pageLang === 'nl' ? 'Sluiten' : 'Close'}
+    </button>
+  </div>
+</div>
+
+<script define:vars={{ redirectMap }}>
+  window.openBuyModal = function () {
+    document.getElementById('buy-modal')?.classList.remove('hidden');
+  };
+
+  window.closeBuyModal = function () {
+    document.getElementById('buy-modal')?.classList.add('hidden');
+  };
+
+  window.redirectToAmazon = function (lang) {
+    if (redirectMap[lang]) {
+      window.location.href = redirectMap[lang];
+    }
+  };
+</script>
