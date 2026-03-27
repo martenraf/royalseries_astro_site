@@ -8,6 +8,7 @@ Open: http://localhost:4321
 ## Images
 Put your images here:
 - `public/img/book.jpg`  (book cover)
+- `public/img/book-cover.jpg`  (book cover2)
 - `public/img/author.jpg` (author portrait)
 
 ## Build for hosting
