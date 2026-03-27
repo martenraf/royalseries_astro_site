@@ -10,17 +10,24 @@ const defaultLang: LangCode = pageLang === 'nl' ? 'nl' : 'en';
 const defaultStores = Object.keys(book.languages[defaultLang].stores) as MarketCode[];
 
 const defaultMarket: MarketCode =
-  (defaultStores.includes('NL') ? 'NL' : defaultStores[0]) ?? 'US';
-
+  pageLang === 'nl'
+    ? 'NL'
+    : 'US';
 // Build final redirect map correctly
 const redirectMap: Record<string, string> = {};
 
 for (const [lang, data] of Object.entries(book.languages)) {
   const stores = data.stores;
-  const asin = stores[defaultMarket];
+
+  const market =
+    pageLang === 'nl'
+      ? 'NL'
+      : 'US';
+
+  const asin = stores[market];
 
   if (asin) {
-    redirectMap[lang] = amazonUrl(defaultMarket, asin);
+    redirectMap[lang] = amazonUrl(market, asin);
   }
 }
 ---
