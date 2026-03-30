@@ -55,9 +55,10 @@ Royal Life reframes leadership like this:
 
 Union → Communion → Alignment → Participation.
 
-If participation (ministry) outruns alignment (inner formation), cracks appear.
+Look at it like this. Your life is a house with Union as its foundation. Your Communion is the ground floor-the living space. Your Alignment is the roof-it protects the living space. When your Alignment is weak (the roof leaks) it threathens the life in the house. When your Communion cracks, it can no longer carry your participation to the outside world. Alignment protects your Communion with Christ and without Communion you can do nothing (John 15).
 
 That’s not weakness. That’s spiritual physics.
+
 ## 3. Emotional Health Is Incarnational ##
 
 Some leaders distrust emotions. We were trained to suspect them.

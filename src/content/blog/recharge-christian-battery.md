@@ -1,5 +1,5 @@
 ---
-title: "How to Recharge the Battery of Your Christian Life"
+title: "Recharge Christian Battery"
 description: "Stop striving and start living from the River. Discover why traditional discipleship models drain your battery and how Union with Christ recharges your soul. "
 author: "Marten Busstra"
 pubDate: 2026-02-23

@@ -39,9 +39,6 @@
             "en",
             "nl"
           ]
-        },
-        "$schema": {
-          "type": "string"
         }
       },
       "required": [
