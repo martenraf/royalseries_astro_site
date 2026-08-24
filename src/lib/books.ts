@@ -73,7 +73,7 @@ export const BOOKS = {
         label: 'Nederlands',
         // Placeholder: set to your Dutch ASIN when published.
         stores: {
-          NL: 'B0GMYH1WDF',
+          NL: 'https://www.amazon.nl/dp/B0HGB47WP8',
         } as Partial<Record<MarketCode, string>>,
       },
     },
@@ -91,6 +91,8 @@ export const BOOKS = {
 export type BookKey = keyof typeof BOOKS;
 
 export function amazonUrl(market: MarketCode, asin: string) {
+  if (asin.startsWith('https://')) return asin;
+
   const { tld } = MARKETS[market];
   return `https://${tld}/dp/${asin}`;
 }
