@@ -17,6 +17,7 @@ const nav = [
   { href: `${base}/#author`, label: labels.author },
   { href: `${base}/#companion`, label: labels.companion },
   { href: `${base}/blog/`, label: labels.blog },
+  ...(lang === 'nl' ? [{ href: `${base}/infographics/`, label: 'Infographics' }] : []),
   { href: `${base}/#get-book`, label: labels.get },
 ];
 ---

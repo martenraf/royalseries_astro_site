@@ -2,7 +2,7 @@
 title: "Why Identity-Based Change Is More Durable Than Goal-Based Change"
 description: "Psychological and Theological Foundations for Sustainable Discipleship. Discover how identity-driven transformation proves more sustainable than goal-based change for discipleship and spiritual growth."
 author: "Marten Busstra"
-pubDate: 2025-12-23
+pubDate: 2026-05-23
 readTime: "5 min read"
 lang: en
 ---

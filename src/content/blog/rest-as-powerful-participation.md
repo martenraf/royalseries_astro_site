@@ -2,7 +2,7 @@
 title: "Rest as a Powerful Participation"
 description: "Discover why many Christians are tired not from doing too little, but from doing it in the wrong order. Learn how rest is fuel, not a reward. "
 author: "Marten Busstra"
-pubDate: 2026-01-26
+pubDate: 2026-06-26
 readTime: "5 min read"
 lang: en
 ---

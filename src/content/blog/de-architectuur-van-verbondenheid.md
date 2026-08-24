@@ -2,7 +2,7 @@
 title: "De architectuur van verbondenheid"
 description: "Ontdek de theologische architectuur ('Ordo Vitae') die rust en kracht herstelt in discipelschap en leiders helpt bewegen van gebrekkige modellen naar een gezond voorbeeld van verbondenheid in Christus."
 author: "Marten Busstra"
-pubDate: 2025-11-27
+pubDate: 2026-04-27
 readTime: "5 min leestijd"
 lang: nl
 ---

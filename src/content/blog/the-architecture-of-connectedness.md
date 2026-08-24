@@ -2,7 +2,7 @@
 title: "The Architecture of Connectedness"
 description: "Toward in Integral Ordo Vitae. Explore the theological architecture that restores rest and strength to discipleship, moving leaders from flawed models to the healthy chain of connectedness in Christ."
 author: "Marten Busstra"
-pubDate: 2025-11-27
+pubDate: 2026-04-27
 readTime: "5 min read"
 lang: en
 ---
@@ -87,4 +87,3 @@ When we exchange the architecture of one-sided emphases for the healthy architec
 It invites leaders to become not coaches of behavior, but architects of identity—forming the riverbed through which the Spirit’s River, already given to us, can freely flow.
 
 Are you already resting in the architecture Christ has established for you?
- 

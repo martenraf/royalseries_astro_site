@@ -2,7 +2,7 @@
 title: "When the Bridge Starts to Crack"
 description: "Seven insights for leaders who look strong but feel stuck. Discover how to move from performance-driven leadership to presence-centered leadership through Union with Christ."
 author: "Marten Busstra"
-pubDate: 2025-10-25
+pubDate: 2026-02-25
 readTime: "5 min read"
 lang: en
 ---

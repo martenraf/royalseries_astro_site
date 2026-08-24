@@ -2,7 +2,7 @@
 title: "Wanneer de brug begint te scheuren"
 description: "Zeven inzichten voor leiders die sterk lijken maar vastlopen. Ontdek hoe je van prestatiegedreven leiderschap beweegt naar presence-gericht leiderschap door eenheid met Christus."
 author: "Marten Busstra"
-pubDate: 2025-10-25
+pubDate: 2026-02-25
 readTime: "5 min leestijd"
 lang: nl
 ---

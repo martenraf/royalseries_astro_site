@@ -2,7 +2,7 @@
 title: "The Fragmented Disciple"
 description: "A Fragmented Christianity produces fragmented Christians. Why an Integrated Life is the Key to Fruitfulness"
 author: "Marten Busstra"
-pubDate: 2026-03-27
+pubDate: 2026-08-24
 readTime: "5 min read"
 lang: en
 ---

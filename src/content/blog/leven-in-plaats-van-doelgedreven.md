@@ -2,7 +2,7 @@
 title: "Leven- in plaats van doelgedreven discipelschap"
 description: "De rivier van God stroomt door ons heen wanneer we leven vanuit onze identiteit in Christus. De kracht van een koninklijke discipel is zijn/haar verbinding met de Bron."
 author: "Marten Busstra"
-pubDate: 2025-10-25
+pubDate: 2026-03-25
 readTime: "5 min leestijd"
 lang: nl
 ---

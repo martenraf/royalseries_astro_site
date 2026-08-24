@@ -2,7 +2,7 @@
 title: "Rust als brandstof in plaats van beloning"
 description: "Ontdek waarom veel christenen moe zijn, niet omdat ze te weinig doen, maar omdat ze het in de verkeerde volgorde doen. Leer hoe rust geen beloning is, maar brandstof."
 author: "Marten Busstra"
-pubDate: 2026-01-26
+pubDate: 2026-06-26
 readTime: "5 min leestijd"
 lang: nl
 --------

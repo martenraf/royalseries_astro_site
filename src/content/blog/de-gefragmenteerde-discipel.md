@@ -2,7 +2,7 @@
 title: "De gefragmenteerde discipel"
 description: "Een gefragmenteerd christendom produceert gefragmenteerde christenen. Waarom een geïntegreerd leven de sleutel is tot vruchtbaarheid"
 author: "Marten Busstra"
-pubDate: 2026-03-27
+pubDate: 2026-08-24
 readTime: "5 min leestijd"
 lang: nl
 ---

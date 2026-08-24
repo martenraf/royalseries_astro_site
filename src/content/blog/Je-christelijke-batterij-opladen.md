@@ -2,7 +2,7 @@
 title: "Laad je christelijke batterij op"
 description: "Stop met streven en begin te leven. Ontdek waarom veel traditionele discipelschapsmodellen je christelijke batterij leegtrekken en hoe je eenheid met Christus je ziel vernieuwt."
 author: "Marten Busstra"
-pubDate: 2026-02-23
+pubDate: 2026-07-23
 readTime: "5 min leestijd"
 lang: nl
 ---

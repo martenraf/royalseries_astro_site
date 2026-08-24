@@ -25,6 +25,7 @@ const t = lang === 'nl'
         <li><a class="hover:text-white" href={`${base}/#author`}>{lang==='nl'?'Auteur':'Author'}</a></li>
         <li><a class="hover:text-white" href={`${base}/#companion`}>Companion</a></li>
         <li><a class="hover:text-white" href={`${base}/blog/`}>Blog</a></li>
+        {lang === 'nl' && <li><a class="hover:text-white" href={`${base}/infographics/`}>Infographics</a></li>}
         <li><a class="hover:text-white" href={`${base}/#get-book`}>{t.buy}</a></li>
       </ul>
     </div>

@@ -2,7 +2,7 @@
 title: "Life- instead of Goaldriven Discipleship"
 description: "The River of God flows through us when we live from our Identity in Christ. This is the power of a Royal Disciple, who is connected to the Source."
 author: "Marten Busstra"
-pubDate: 2025-10-25
+pubDate: 2026-03-25
 readTime: "5 min read"
 lang: en
 ---

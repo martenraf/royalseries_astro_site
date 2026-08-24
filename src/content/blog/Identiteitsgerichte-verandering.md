@@ -2,7 +2,7 @@
 title: "Waarom identiteitsgerichte verandering duurzamer is dan doelgerichte verandering"
 description: "Psychologische en theologische fundamenten voor duurzame discipelschap. Ontdek hoe identiteitsgedreven transformatie duurzamer blijkt dan doelgerichte verandering voor geestelijke groei."
 author: "Marten Busstra"
-pubDate: 2025-12-23
+pubDate: 2026-05-23
 readTime: "5 min leestijd"
 lang: nl
 ---

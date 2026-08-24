@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const infographics = [
+  { title: 'Ordo Vitae', file: 'ordo-vitae.png' },
+  { title: 'Vereniging', file: 'vereniging.png' },
+  { title: 'Verbondenheid', file: 'verbondenheid.png' },
+  { title: 'Navolging', file: 'navolging.png' },
+  { title: 'Vertegenwoordiging', file: 'vertegenwoordiging.png' },
+  { title: 'Vernieuwing', file: 'Vernieuwing.png' },
+  { title: 'Verheerlijking', file: 'verheerlijking.png' },
+];
+
+const initialInfographic = infographics[0];
+---
+
+<BaseLayout
+  title="Infographics | The Royal Series"
+  description="Nederlandstalige Royal Life-infographics over eenheid met Christus, discipelschap en de Ordo Vitae."
+  lang="nl"
+>
+  <main class="bg-background">
+    <section class="pt-20 pb-24 md:pt-24 md:pb-28 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <header class="max-w-3xl">
+          <p class="text-accent font-display font-semibold text-sm uppercase tracking-wide">Royal Life</p>
+          <h1 class="text-primary mt-2 text-4xl md:text-5xl">Infographics</h1>
+          <p class="mt-5 text-lg text-foreground/80 font-body leading-relaxed">
+            Visuele overzichten over leven vanuit eenheid met Christus, de Rivier van God en de Ordo Vitae.
+          </p>
+          <div class="w-24 h-1 bg-accent rounded-full mt-6"></div>
+        </header>
+
+        <div class="mt-12" data-infographics>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3" aria-label="Kies een infographic">
+            {infographics.map((infographic, index) => {
+              const src = `/img/infographics/${infographic.file}`;
+
+              return (
+                <button
+                  type="button"
+                  data-infographic-button
+                  data-title={infographic.title}
+                  data-src={src}
+                  data-file={infographic.file}
+                  aria-pressed={index === 0 ? 'true' : 'false'}
+                  class="min-h-14 px-3 py-3 border border-primary/20 bg-card text-primary font-display font-semibold text-sm leading-snug rounded-md hover:border-accent hover:bg-accent/10 transition-colors aria-pressed:bg-accent aria-pressed:border-accent aria-pressed:text-foreground"
+                >
+                  {infographic.title}
+                </button>
+              );
+            })}
+          </div>
+
+          <section id="infographic-viewer" class="mt-8 border border-border bg-card rounded-md overflow-hidden shadow-soft">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-5 md:p-6 border-b border-border">
+              <h2 id="infographic-title" class="text-2xl font-display font-semibold text-primary">
+                {initialInfographic.title}
+              </h2>
+              <a
+                id="infographic-download"
+                href={`/img/infographics/${initialInfographic.file}`}
+                download={initialInfographic.file}
+                class="self-start sm:self-auto inline-flex items-center justify-center gap-2 px-5 py-3 bg-accent text-foreground font-display font-semibold rounded-md hover:opacity-90 hover:shadow-soft transition-all duration-300"
+              >
+                <span aria-hidden="true">↓</span>
+                <span>Download PNG</span>
+              </a>
+            </div>
+
+            <div class="aspect-[3/4] sm:aspect-[16/10] bg-background p-3 sm:p-6 md:p-8">
+              <img
+                id="infographic-image"
+                src={`/img/infographics/${initialInfographic.file}`}
+                alt={`Infographic ${initialInfographic.title}`}
+                decoding="async"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const infographicRoot = document.querySelector('[data-infographics]');
+
+    if (infographicRoot) {
+      const buttons = infographicRoot.querySelectorAll('[data-infographic-button]');
+      const image = infographicRoot.querySelector('#infographic-image');
+      const title = infographicRoot.querySelector('#infographic-title');
+      const download = infographicRoot.querySelector('#infographic-download');
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const src = button.getAttribute('data-src');
+          const infographicTitle = button.getAttribute('data-title');
+          const file = button.getAttribute('data-file');
+
+          if (!src || !infographicTitle || !file || !(image instanceof HTMLImageElement) || !(download instanceof HTMLAnchorElement)) {
+            return;
+          }
+
+          buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+          image.src = src;
+          image.alt = `Infographic ${infographicTitle}`;
+          title && (title.textContent = infographicTitle);
+          download.href = src;
+          download.download = file;
+        });
+      });
+    }
+  </script>
+</BaseLayout>
