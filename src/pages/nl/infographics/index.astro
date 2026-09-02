@@ -2,7 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const infographics = [
-  { title: 'Ordo Vitae', file: 'ordo-vitae.png' },
+  { title: 'Ordo Vitae', file: 'ordo-vitae.png', version: '20260902' },
   { title: 'Vereniging', file: 'vereniging.png' },
   { title: 'Verbondenheid', file: 'verbondenheid.png' },
   { title: 'Navolging', file: 'navolging.png' },
@@ -12,6 +12,8 @@ const infographics = [
 ];
 
 const initialInfographic = infographics[0];
+const infographicSrc = (infographic: { file: string; version?: string }) =>
+  `/img/infographics/${infographic.file}${infographic.version ? `?v=${infographic.version}` : ''}`;
 ---
 
 <BaseLayout
@@ -34,7 +36,7 @@ const initialInfographic = infographics[0];
         <div class="mt-12" data-infographics>
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3" aria-label="Kies een infographic">
             {infographics.map((infographic, index) => {
-              const src = `/img/infographics/${infographic.file}`;
+              const src = infographicSrc(infographic);
 
               return (
                 <button
@@ -59,7 +61,7 @@ const initialInfographic = infographics[0];
               </h2>
               <a
                 id="infographic-download"
-                href={`/img/infographics/${initialInfographic.file}`}
+                href={infographicSrc(initialInfographic)}
                 download={initialInfographic.file}
                 class="self-start sm:self-auto inline-flex items-center justify-center gap-2 px-5 py-3 bg-accent text-foreground font-display font-semibold rounded-md hover:opacity-90 hover:shadow-soft transition-all duration-300"
               >
@@ -71,7 +73,7 @@ const initialInfographic = infographics[0];
             <div class="aspect-[3/4] sm:aspect-[16/10] bg-background p-3 sm:p-6 md:p-8">
               <img
                 id="infographic-image"
-                src={`/img/infographics/${initialInfographic.file}`}
+                src={infographicSrc(initialInfographic)}
                 alt={`Infographic ${initialInfographic.title}`}
                 decoding="async"
                 class="w-full h-full object-contain"
